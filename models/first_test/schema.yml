@@ -5,29 +5,40 @@ models:
     - name: raw_table
       description: "the very raw table of bq"
       columns:
-          - name: int64_field_0
+          - name: game_id
             description: "The primary key for this table"
             tests:
                 - unique
                 - not_null
-          - name: game_date
-          - name: bookmaker
+          - name: the date
           - name: odd_home
-          - name: odd_even
           - name: odd_exte
-          - name: link
 
     - name: stag_1
       description: "testing stuff"
       columns:
-          - name: int64_field_0
+          - name: game
             description: "The primary key for this table"
             tests:
                 - unique
                 - not_null
-          - name: game_date
-          - name: bookmaker
-          - name: odd_home
-          - name: odd_even
-          - name: odd_exte
-          - name: link
+          - name: avg_home
+          - name: proba_home
+          - name: avg_exte
+          - name: proba_exte
+
+
+    - name: final_1
+      description: "testing stuff"
+      columns:
+          - name: game
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+          - name: avg_home
+          - name: proba_home
+          - name: avg_exte
+          - name: proba_exte
+          - name: total_avg
+          - name: total_proba
